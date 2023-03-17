@@ -1,0 +1,35 @@
+{
+  "name": "exercise-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --cache --fix --max-warnings=0",
+    "format": "prettier . --write",
+    "prepare": "husky install",
+    "start:create-scheduled-transaction": "node src/create-scheduled-transaction",
+    "start:create-scheduled-transaction:debug": "node --inspect-brk src/create-scheduled-transaction",
+    "start:submit-signature": "node src/submit-signature",
+    "start:submit-signature:debug": "node --inspect-brk src/submit-signature"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "2.8.4"
+  },
+  "lint-staged": {
+    "*.js": "npm run lint",
+    "*.--write": "prettier --write"
+  },
+  "dependencies": {
+    "@hashgraph/sdk": "^2.20.0",
+    "dotenv": "^16.0.3"
+  }
+}
